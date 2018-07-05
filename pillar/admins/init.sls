@@ -1,0 +1,4 @@
+admins:
+  - jane
+  - john
+  - gillian

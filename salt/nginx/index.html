@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{{ grains['id'] }}</title>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<table class="table table-bordered"" style="width:100%">
+  <tr>
+    <th>Key</th>
+    <th>Value</th>
+  </tr>
+  {% for k, v in grains.items() %}
+  <tr>
+    <td>{{ k }}</td>
+    <td>{{ v|yaml(False)|replace('\n','<br>') }}</td>
+  </tr>
+  {% endfor %}
+
+</table>
+
+</body>
+</html>
